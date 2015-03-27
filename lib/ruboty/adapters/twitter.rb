@@ -40,7 +40,8 @@ module Ruboty
             robot.receive(
               body: tweet.text,
               from: tweet.user.screen_name,
-              tweet: message
+              tweet: message,
+              retweeted: retweeted
             )
           when ::Twitter::Streaming::Event
             if message.name == :follow
